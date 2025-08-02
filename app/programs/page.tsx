@@ -9,7 +9,7 @@ export default function TreatmentsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-10 pb-16 "  style={{
+      <section className="pt-10 pb-10  px-4   "  style={{
                 backgroundImage: `url('/images/footer-bg.jpg')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",

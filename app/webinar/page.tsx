@@ -103,8 +103,9 @@ export default function WebinarPage() {
                   <strong>Free them from disease with help of Ayurveda.</strong>
                 </p>
                 <p>
-                  Let them depend on their immunity with natural Ayurvedic solutions for common health issues in
-                  children's first 3 years.
+                  Let them depend on their immunity with natural Ayurvedic
+                  solutions for common health issues in children's first 3
+                  years.
                 </p>
               </div>
 
@@ -112,7 +113,9 @@ export default function WebinarPage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 space-y-4">
                 <div className="flex items-center space-x-3">
                   <Calendar className="w-6 h-6 text-accent-orange" />
-                  <span className="text-xl font-semibold">14th August 2024</span>
+                  <span className="text-xl font-semibold">
+                    14th August 2024
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Clock className="w-6 h-6 text-accent-orange" />
@@ -125,7 +128,9 @@ export default function WebinarPage() {
               </div>
 
               <div className="bg-red-600/20 border border-red-400 rounded-lg p-4">
-                <p className="text-white font-semibold">⚠️ Registration is compulsory - Limited seats available!</p>
+                <p className="text-white font-semibold">
+                  ⚠️ Registration is compulsory - Limited seats available!
+                </p>
               </div>
             </div>
 
@@ -133,7 +138,7 @@ export default function WebinarPage() {
             <div className="relative m-4">
               <div className="relative overflow-hidden rounded-3xl">
                 <Image
-                  src="/images/istockphoto-497132461-612x612.jpg"
+                  src="/images/cutebaby.jpeg"
                   alt="Female doctor examining young child with stethoscope - First 1000 days webinar"
                   width={700}
                   height={400}
@@ -144,7 +149,9 @@ export default function WebinarPage() {
             {/* Register Now Button */}
             <div className="lg:col-span-2 text-center mt-8 mb-2">
               <a
-                href="#registration"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdJ59xAfbIrkvWS3cGkoVT3GfQia-gJC0sBBYbup90L42MvSw/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-accent-orange hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
               >
                 Register Now
@@ -162,7 +169,8 @@ export default function WebinarPage() {
               Nurture Your Baby's Growth with Nature's Touch
             </h2>
             <p className="text-lg text-text-secondary">
-              Learn valuable tips on nurturing your 0–3 year baby with time-tested Ayurvedic wisdom
+              Learn valuable tips on nurturing your 0–3 year baby with
+              time-tested Ayurvedic wisdom
             </p>
           </div>
 
@@ -176,7 +184,9 @@ export default function WebinarPage() {
                   <div className="w-16 h-16 bg-primary-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <highlight.icon className="w-8 h-8 text-primary-green" />
                   </div>
-                  <h3 className="text-xl font-serif font-bold text-text-primary mb-4">{highlight.title}</h3>
+                  <h3 className="text-xl font-serif font-bold text-text-primary mb-4">
+                    {highlight.title}
+                  </h3>
                   <p className="text-text-secondary">{highlight.description}</p>
                 </CardContent>
               </Card>
@@ -194,7 +204,8 @@ export default function WebinarPage() {
                 Why Attend This Webinar?
               </h2>
               <p className="text-lg text-text-secondary mb-8">
-                Join hundreds of parents who are already nurturing their babies with natural Ayurvedic care.
+                Join hundreds of parents who are already nurturing their babies
+                with natural Ayurvedic care.
               </p>
             </div>
 
@@ -208,10 +219,13 @@ export default function WebinarPage() {
             </div>
 
             <div className="bg-gradient-to-r from-primary-green/10 to-accent-orange/10 rounded-2xl p-6 mt-6">
-              <h3 className="text-xl font-bold text-text-primary mb-3">Special Independence Day Offer</h3>
+              <h3 className="text-xl font-bold text-text-primary mb-3">
+                Special Independence Day Offer
+              </h3>
               <p className="text-text-secondary">
-                This comprehensive webinar is absolutely FREE as our Independence Day gift to all parents. Help your
-                baby gain independence from common health issues!
+                This comprehensive webinar is absolutely FREE as our
+                Independence Day gift to all parents. Help your baby gain
+                independence from common health issues!
               </p>
             </div>
           </div>
@@ -235,12 +249,17 @@ export default function WebinarPage() {
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text-primary">Meet Your Expert</h2>
-              <h3 className="text-2xl font-semibold text-primary-green">Dr. Maitreyee Limaye</h3>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text-primary">
+                Meet Your Expert Pediatrician
+              </h2>
+              <h3 className="text-2xl font-semibold text-primary-green">
+                Dr. Maitreyee Limaye
+              </h3>
               <p className="text-lg text-text-secondary">
-                Qualified Ayurvedic Pediatrician with over 15 years of experience in child healthcare. Dr. Limaye
-                specializes in combining traditional Ayurvedic wisdom with modern pediatric care to provide holistic
-                treatment for children.
+                Qualified Ayurvedic Pediatrician with over 10 years of
+                experience in child healthcare. Dr. Limaye specializes in
+                combining traditional Ayurvedic wisdom with modern pediatric
+                care to provide holistic treatment for children.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -249,7 +268,7 @@ export default function WebinarPage() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-primary-green" />
-                  <span>15+ years in Ayurvedic Pediatric Care</span>
+                  <span>10+ years in Ayurvedic Pediatric Care</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-primary-green" />
@@ -264,5 +283,5 @@ export default function WebinarPage() {
       <Footer />
       <WhatsAppButton />
     </main>
-  )
+  );
 }

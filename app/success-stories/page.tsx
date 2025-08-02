@@ -25,7 +25,7 @@ export default function SuccessStories() {
       parentName: "Pooja Shinde",
       image: "/images/doctor-examining-child.png",
       story:
-        "Vivaan's asthma diagnosis was overwhelming for our family. Dr. Anjali Deshmukh not only provided excellent medical care but also educated us thoroughly about managing his condition. Vivaan now participates in sports and leads an active lifestyle.",
+        "Vivaan's asthma diagnosis was overwhelming for our family. Dr. Maitreyee Limaye not only provided excellent medical care but also educated us thoroughly about managing his condition. Vivaan now participates in sports and leads an active lifestyle.",
       outcome: "Vivaan's asthma is well-controlled and he participates in all activities.",
       rating: 5,
     },
