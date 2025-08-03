@@ -1,0 +1,5 @@
+ RewriteEngine On
+ 
+ # Redirect all traffic to the /out folder
+ RewriteCond %{REQUEST_URI} !^/out/
+ RewriteRule ^(.*)$ out/$1 [L]
