@@ -91,7 +91,7 @@ export default function WebinarPage() {
             <div className="text-white space-y-8 m-4">
               <div className="inline-flex items-center px-4 py-2 bg-red-600 rounded-full text-sm font-medium text-white mb-6">
                 <Gift className="w-4 h-4 mr-2" />
-                FREE Independence Day Special
+                FREE Webinar
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold leading-tight">
@@ -169,7 +169,7 @@ export default function WebinarPage() {
               Nurture Your Baby's Growth with Nature's Touch
             </h2>
             <p className="text-lg text-text-secondary">
-              Learn valuable tips on nurturing your 0–3 year baby with
+              Learn valuable tips on nurturing your 0–3 year old baby with
               time-tested Ayurvedic wisdom
             </p>
           </div>
@@ -196,41 +196,47 @@ export default function WebinarPage() {
       </section>
 
       {/* Registration Form */}
-      <section className="py-20 ">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text-primary mb-6">
-                Why Attend This Webinar?
-              </h2>
-              <p className="text-lg text-text-secondary mb-8">
-                Join hundreds of parents who are already nurturing their babies
-                with natural Ayurvedic care.
-              </p>
-            </div>
+      <section className="py-16 sm:py-20">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-4xl mx-auto">
+      
+      {/* Heading & intro - centered */}
+      <div className="text-center">
+        <h2 className="text-2xl sm:text-4xl font-serif font-bold text-text-primary mb-4 sm:mb-6">
+          Why Attend This Webinar?
+        </h2>
+        <p className="text-base sm:text-lg text-text-secondary mb-6 sm:mb-8">
+          Join hundreds of parents who are already nurturing their babies
+          with natural Ayurvedic care.
+        </p>
+      </div>
 
-            <div className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-primary-green flex-shrink-0 mt-1" />
-                  <span className="text-text-secondary text-lg">{benefit}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-gradient-to-r from-primary-green/10 to-accent-orange/10 rounded-2xl p-6 mt-6">
-              <h3 className="text-xl font-bold text-text-primary mb-3">
-                Special Independence Day Offer
-              </h3>
-              <p className="text-text-secondary">
-                This comprehensive webinar is absolutely FREE as our
-                Independence Day gift to all parents. Help your baby gain
-                independence from common health issues!
-              </p>
-            </div>
+      {/* Bullet points - always left aligned */}
+      <div className="space-y-3 sm:space-y-4 text-left">
+        {benefits.map((benefit, index) => (
+          <div
+            key={index}
+            className="grid grid-cols-[auto,1fr] gap-x-2 sm:gap-x-3 items-start"
+          >
+            <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary-green mt-0.5" />
+            <span className="text-text-secondary text-base sm:text-lg leading-snug">
+              {benefit}
+            </span>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+
+      {/* Independence Day Banner */}
+      <div className="bg-gradient-to-r from-primary-green/10 to-accent-orange/10 rounded-2xl p-4 sm:p-6 mt-6 sm:mt-8 text-center">
+        <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-2 sm:mb-3">
+          Special Independence Day
+        </h3>
+        <p className="text-sm sm:text-base text-text-secondary">
+        This special webinar, on the occasion of Independence Day, will help your baby gain freedom from common health issues!        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* About the Expert */}
       <section className="py-20 bg-white">
