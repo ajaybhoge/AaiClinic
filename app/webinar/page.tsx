@@ -110,11 +110,11 @@ export default function WebinarPage() {
               </div>
 
               {/* Event Details */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 space-y-4">
+              <div className=" rounded-2xl p-6 space-y-4">
                 <div className="flex items-center space-x-3">
                   <Calendar className="w-6 h-6 text-accent-orange" />
                   <span className="text-xl font-semibold">
-                    14th August 2024
+                    17th August 2024
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -127,9 +127,9 @@ export default function WebinarPage() {
                 </div>
               </div>
 
-              <div className="bg-red-600/20 border border-red-400 rounded-lg p-4">
+              <div className="bg--600/20 border border-green-400 rounded-lg p-4">
                 <p className="text-white font-semibold">
-                  ⚠️ Registration is compulsory - Limited seats available!
+                 Registration is compulsory - Limited seats available!
                 </p>
               </div>
             </div>
@@ -229,10 +229,10 @@ export default function WebinarPage() {
       {/* Independence Day Banner */}
       <div className="bg-gradient-to-r from-primary-green/10 to-accent-orange/10 rounded-2xl p-4 sm:p-6 mt-6 sm:mt-8 text-center">
         <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-2 sm:mb-3">
-          Special Independence Day
+Ayurveda Baby Wellness Webinar
         </h3>
         <p className="text-sm sm:text-base text-text-secondary">
-        This special webinar, on the occasion of Independence Day, will help your baby gain freedom from common health issues!        </p>
+        Help your baby overcome common health issues with expert Ayurvedic tips to boost immunity, support growth, and ensure a healthier future.</p>
       </div>
     </div>
   </div>
