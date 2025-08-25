@@ -270,7 +270,7 @@ export default function Home() {
               </p>
           
               <button className="bg-orange-600 text-primary-white px-8 py-3 rounded-full font-semibold duration-300 ">
-                <a href="https://calendly.com/ajbhoge01/30min" target="_blank" rel="noreferrer">Book Consultation
+                <a href="https://calendly.com/info-aaiclinc/30min" target="_blank" rel="noreferrer">Book Consultation
                 </a>
               </button>
               </div>

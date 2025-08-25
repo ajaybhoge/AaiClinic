@@ -114,7 +114,7 @@ export default function WebinarPage() {
                 <div className="flex items-center space-x-3">
                   <Calendar className="w-6 h-6 text-accent-orange" />
                   <span className="text-xl font-semibold">
-                    17th August 2024
+                    18th August 2024
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -149,7 +149,7 @@ export default function WebinarPage() {
             {/* Register Now Button */}
             <div className="lg:col-span-2 text-center mt-8 mb-2">
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdJ59xAfbIrkvWS3cGkoVT3GfQia-gJC0sBBYbup90L42MvSw/viewform?usp=dialog"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeAl_5d7QvDRO4Wfv1SD3T-GdbELnmIEnPUDCZr5syFvX4ruw/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-accent-orange hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
