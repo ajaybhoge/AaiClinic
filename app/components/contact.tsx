@@ -1,13 +1,12 @@
 "use client"
 
-import React from "react"
-
-import { useState } from "react"
+import React, { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react"
+import emailjs from "emailjs-com"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -18,10 +17,32 @@ export default function Contact() {
     message: "",
   })
 
+  const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState("")
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
+    setLoading(true)
+    setStatus("")
+
+    emailjs
+      .send(
+        "service_9v8rx1r", // replace with EmailJS Service ID
+        "template_sdlpdkz", // replace with EmailJS Template ID
+        formData,
+        "FUk4mQcbSCOYPioPE" // replace with EmailJS Public Key
+      )
+      .then(
+        () => {
+          setStatus("✅ Message sent successfully!")
+          setFormData({ name: "", email: "", phone: "", childAge: "", message: "" }) // reset form
+          setLoading(false)
+        },
+        () => {
+          setStatus("❌ Failed to send message. Please try again.")
+          setLoading(false)
+        }
+      )
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -56,7 +77,7 @@ export default function Contact() {
   ]
 
   return (
-    <section className="py-20 pt-10 bg-white" >
+    <section className="py-20 pt-10 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
@@ -87,7 +108,7 @@ export default function Contact() {
             <div className="pt-6">
               <Button
                 className="bg-accent-orange hover:bg-orange-600 text-white rounded-full px-6 py-3"
-                onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+                onClick={() => window.open("https://wa.me/919405003087", "_blank")}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Chat on WhatsApp
@@ -96,16 +117,14 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-white "
-             >
-          
+          <Card className="bg-white">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-serif font-bold  mb-6 text-text-primary ">Schedule a Consultation</h3>
+              <h3 className="text-2xl font-serif font-bold mb-6 text-text-primary">Schedule a Consultation</h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2 ">
+                    <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2">
                       Parent/Guardian Name *
                     </label>
                     <Input
@@ -138,7 +157,7 @@ export default function Contact() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-text-primary mb-2 ">
+                    <label htmlFor="phone" className="block text-sm font-medium text-text-primary mb-2">
                       Phone Number *
                     </label>
                     <Input
@@ -153,7 +172,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="childAge" className="block text-sm font-medium text-text-primary mb-2 ">
+                    <label htmlFor="childAge" className="block text-sm font-medium text-text-primary mb-2">
                       Child's Age
                     </label>
                     <Input
@@ -169,7 +188,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-text-primary mb-2 ">
+                  <label htmlFor="message" className="block text-sm font-medium text-text-primary mb-2">
                     Message
                   </label>
                   <Textarea
@@ -185,11 +204,16 @@ export default function Contact() {
 
                 <Button
                   type="submit"
+                  disabled={loading}
                   className="bg-accent-orange hover:bg-orange-600 text-white rounded-full px-8 py-4 font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 w-full"
                 >
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  {loading ? "Sending..." : <>
+                    <Send className="w-5 h-5 mr-2" />
+                    Send Message
+                  </>}
                 </Button>
+
+                {status && <p className="text-center text-sm mt-4">{status}</p>}
               </form>
             </CardContent>
           </Card>
