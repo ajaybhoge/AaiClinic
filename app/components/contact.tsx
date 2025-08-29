@@ -149,7 +149,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 91912 29292"
                     />
                   </div>
                   <div>

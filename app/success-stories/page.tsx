@@ -33,7 +33,7 @@ export default function SuccessStories() {
       title: "Nine Years of Trust and Transformation",
       childName: "Aditya & Adway",
       age: "9 years old",
-      parentName: "Mrs.Angha bhargave \& Mr.Mandar bhargave",
+      parentName: "Mrs.Anagha bhargave \& Mr.Mandar bhargave",
       image: "/images/Angha.jpeg",
       story:
         " I am truly grateful to Dr. Maitreyee Limaye Mam for the exceptional care and treatment provided to my two sons. It's been 9 years now, from the very first consultation, the doctor took the time to understand their health issues in detail and guided us with effective Ayurvedic treatments that brought visible improvements in their overall well-being. What stood out most was the doctor’s continuous support no matter at what time, ensuring my toddlers’ health kept improving step by step. The advice was always practical, compassionate, and rooted in genuine concern for their well-being. Thanks to Dr. Maitreyee Mam and Dr. Saurabh Sir as well, my children are healthier, more energetic, and happier. I highly recommend them to any parent looking for a caring and knowledgeable Ayurvedic doctor. ",
@@ -54,9 +54,9 @@ export default function SuccessStories() {
   ]
 
   const stats = [
-    { number: "98%", label: "Parent Satisfaction Rate" },
+    { number: "100%", label: "Parent Satisfaction Rate" },
     { number: "5,000+", label: "Success Stories" },
-    { number: "15+", label: "Years of Excellence" },
+    { number: "10+", label: "Years of Excellence" },
     { number: "4.9/5", label: "Average Rating" },
   ]
 
@@ -77,7 +77,7 @@ export default function SuccessStories() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-white shadow-inner">
+      {/* <section className="py-12 bg-white shadow-inner">
         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((stat, index) => (
             <div key={index} className="p-4">
@@ -86,7 +86,7 @@ export default function SuccessStories() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Success Stories */}
       <section className="py-20 bg-gradient-to-br from-cream-bg to-white">
@@ -137,6 +137,37 @@ export default function SuccessStories() {
           ))}
         </div>
       </section>
+
+            {/* Video Section */}
+            <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text-primary mb-8">
+            Watch Our Success Stories
+          </h2>
+          <div className="grid md:grid-cols-3  gap-8">
+            <div className="rounded-2xl overflow-hidden ">
+              <video controls className="w-50% h-50% rounded-2xl">
+                <source src="/videos/story1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="rounded-2xl overflow-hidden ">
+              <video controls className="w-50% h-50% rounded-2xl">
+                <source src="/videos/story2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            {/* <div className="rounded-2xl overflow-hidden ">
+              <video controls className="w-50% h-50% rounded-2xl">
+                <source src="/videos/story3.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div> */}
+            
+          </div>
+        </div>
+      </section>
+
 
       <Footer />
       <WhatsAppButton />
