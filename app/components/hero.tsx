@@ -48,7 +48,7 @@ export default function Hero() {
                 asChild
                 className="bg-accent-orange hover:bg-orange-600 text-white rounded-full px-8 py-4 font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 group"
               >
-                <a href="https://calendly.com/ajbhoge01/30min" target="_blank" rel="noreferrer">
+                <a href="https://calendly.com/info-aaiclinc/30min" target="_blank" rel="noreferrer">
                   <Calendar className="w-5 h-5 mr-2" />
                   Book Consultation
                   <Sparkles className="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform duration-200" />

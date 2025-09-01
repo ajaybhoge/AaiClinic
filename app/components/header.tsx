@@ -50,7 +50,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button asChild className="bg-accent-orange hover:bg-orange-600 text-white rounded-full px-6 py-2">
-              <a href="https://calendly.com/ajbhoge01/30min" target="_blank" rel="noreferrer">
+              <a href="https://calendly.com/info-aaiclinc/30min" target="_blank" rel="noreferrer">
                 Book Appointment
               </a>
             </Button>
@@ -80,7 +80,7 @@ export default function Header() {
                 </Link>
               ))}
               <Button asChild className="bg-accent-orange hover:bg-orange-600 text-white rounded-full px-6 py-2 mt-4">
-                <a href="https://calendly.com/ajbhoge01/30min" target="_blank" rel="noreferrer">
+                <a href="https://calendly.com/info-aaiclinc/30min" target="_blank" rel="noreferrer">
                   Book Appointment
                 </a>
               </Button>
