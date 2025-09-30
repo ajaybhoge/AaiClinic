@@ -195,7 +195,102 @@ export default function TreatmentsPage() {
           </div>
         </div>
       </section>
+     {/* Treatment Menu Section */}
+<section className="py-20 bg-gradient-to-br from-white to-cream-bg">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-green mb-4">
+        Our Ayurvedic Treatment 
+      </h2>
+      <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+        We provide holistic and natural Ayurvedic care tailored for children. Explore our treatment menu designed 
+        to address common childhood challenges with safe, gentle, and effective remedies.
+      </p>
+    </div>
 
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      
+      {/* Digestive Care */}
+      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 hover:scale-105 transition-transform duration-300 text-center">
+        <img 
+          src="/images/digetive.jpg" 
+          alt="Digestive Care" 
+          className="w-250 h-13 mx-auto mb-4"
+        />
+        <h3 className="text-xl font-bold text-primary-green mb-3">Digestive Care</h3>
+        <p className="text-text-secondary text-sm">
+          Natural remedies for constipation, indigestion, and weak appetite.
+        </p>
+      </div>
+
+      {/* Immunity Boost */}
+      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 hover:scale-105 transition-transform duration-300 text-center">
+        <img 
+          src="/images/imunity.jpg" 
+          alt="Immunity Boost" 
+          className="w-250 h-13 mx-auto mb-4"
+        />
+        <h3 className="text-xl font-bold text-primary-green mb-3">Immunity Boost</h3>
+        <p className="text-text-secondary text-sm">
+          Chyawanprash, Ashwagandha, Tulsi & Giloy to strengthen resistance against infections.
+        </p>
+      </div>
+
+      {/* Skin & Allergy Care */}
+      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 hover:scale-105 transition-transform duration-300 text-center">
+        <img 
+          src="/images/alergy.jpg" 
+          alt="Skin & Allergy Care" 
+          className="w-250 h-13 mx-auto mb-4"
+        />
+        <h3 className="text-xl font-bold text-primary-green mb-3">Skin & Allergy Care</h3>
+        <p className="text-text-secondary text-sm">
+          Herbal solutions for eczema, rashes, and seasonal allergies.
+        </p>
+      </div>
+
+      {/* Growth & Nutrition */}
+      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 hover:scale-105 transition-transform duration-300 text-center">
+        <img 
+          src="/images/growth.jpeg" 
+          alt="Growth & Nutrition" 
+          className="w-250 h-13 mx-auto mb-4"
+        />
+        <h3 className="text-xl font-bold text-primary-green mb-3">Growth & Nutrition</h3>
+        <p className="text-text-secondary text-sm">
+          Ayurvedic diet plans and herbs to support strength and healthy development.
+        </p>
+      </div>
+
+      {/* Speech & Cognitive Support */}
+      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 hover:scale-105 transition-transform duration-300 text-center">
+        <img 
+          src="/images/speech.jpeg" 
+          alt="Speech & Cognitive Support" 
+          className="w-250 h-13  mx-auto mb-4"
+        />
+        <h3 className="text-xl font-bold text-primary-green mb-3">Speech & Cognitive Support</h3>
+        <p className="text-text-secondary text-sm">
+          Brahmi, Shankhpushpi & therapies for speech clarity and focus.
+        </p>
+      </div>
+
+      {/* Sleep & Emotional Wellness */}
+      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 hover:scale-105 transition-transform duration-300 text-center">
+        <img 
+          src="/images/sleep.jpeg" 
+          alt="Sleep & Emotional Wellness" 
+          className=" w-250 h-13 mx-auto mb-4"
+        />
+        <h3 className="text-xl font-bold text-primary-green mb-3">Sleep & Emotional Wellness</h3>
+        <p className="text-text-secondary text-sm">
+          Nutmeg, Ashwagandha & mindful practices for better sleep and calmness.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* Common Child Health Issues & Ayurvedic Solutions */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

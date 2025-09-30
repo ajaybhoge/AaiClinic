@@ -51,6 +51,29 @@ export default function SuccessStories() {
       outcome: "We feel healthy, safe, and cared for under Dr. Maitreyi’s guidance.",
       rating: 5,
     },
+    {
+      title: "Healing with Care and Lasting Results",
+      childName: "Navika & Ishika",
+      age: "Navika - 13 years old, Ishika - 10 years old",
+      parentName: "Mrs. Sheetal Maheshwari",
+      image: "/images/navika.jpeg",
+      story:
+        "I have been taking my daughters, Navika and Ishika, to Dr. Limaye for the past 8 years, and the results have been truly tremendous. Her Ayurvedic treatment works from the root cause, ensuring the problem is not just managed but completely cured. I am deeply grateful for her expertise, care, and genuine concern for her patients’ well-being. Dr. Limaye’s guidance has brought lasting health and happiness to our family, and I wholeheartedly recommend her to anyone seeking authentic and effective Ayurvedic healing.",
+      outcome: "Thanks to Dr. Limaye, our family enjoys long-term health, happiness, and peace of mind.",
+      rating: 5,
+    },
+    {
+      title: "14 Years of Waiting, A Lifetime of Healing",
+      childName: "Sonika Jadhav",
+      age: "0.6 Months",
+      parentName: "Pushkar",
+      image: "/images/mother-baby.jpeg",
+      story:
+        "After 14 years of marriage, I was blessed with the joy of motherhood—a moment of immense happiness and responsibility. As an education counselor, I’ve guided many young minds, but nurturing my own child from day one brought a new kind of challenge, especially when my baby began struggling with severe gas issues and overall discomfort. \n\nIn search of a safe and effective solution, I visited Aai Clinic, led by the compassionate and knowledgeable Dr. Maitree Limaye. Her dedication to holistic child care through Ayurveda was exactly what my baby needed. The clinic offers a one-stop, sound and natural approach to pediatric wellness, and the treatments we received were nothing short of remarkable.\n\nThe Ayurvedic products used are self-generated, gentle, and safe for infants—a true blessing for any parent seeking trustworthy care. Dr. Limaye’s expertise and warmth made all the difference, and I’m deeply grateful for her support during such a crucial time.",
+      outcome: "Thanks to Dr. Limaye and Aai Clinic, my baby found comfort and healing through safe Ayurvedic care, giving me immense peace of mind as a new mother.",
+      rating: 5,
+    },
+    
   ]
 
   const stats = [
@@ -88,85 +111,142 @@ export default function SuccessStories() {
         </div>
       </section> */}
 
-      {/* Success Stories */}
-      <section className="py-20 bg-gradient-to-br from-cream-bg to-white">
-        <div className="container mx-auto px-4 space-y-16">
-          {stories.map((story, index) => (
-            <Card
-              key={index}
-              className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white rounded-2xl overflow-hidden"
-            >
-              <div className={`grid lg:grid-cols-2 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
-                <div className={`relative h-64 lg:h-auto ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                  <Image
-                    src={story.image}
-                    alt={`${story.childName}'s success story`}
-                    fill
-                    className="object-cover"
-                  />
+  {/* Success Stories */}
+<section className="py-20 bg-gradient-to-br from-cream-bg to-white">
+  <div className="container mx-auto px-4 space-y-16">
+    {stories.map((story, index) => (
+      <Card
+        key={index}
+        className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white rounded-2xl overflow-hidden"
+      >
+        {/* Responsive wrapper: flex on mobile, grid on desktop */}
+        <div
+          className={`
+            flex flex-col lg:grid lg:grid-cols-2
+            ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}
+          `}
+        >
+          {/* Image */}
+          <div
+            className={`
+              relative h-80 sm:h-96 lg:h-[850px]
+              ${index % 2 === 1 ? "lg:col-start-2" : ""}
+            `}
+          >
+            <Image
+              src={story.image}
+              alt={`${story.childName}'s success story`}
+              fill
+              className="object-cover object-top rounded-xl"
+            />
+          </div>
+
+          {/* Content */}
+          <CardContent
+            className={`
+              p-6 sm:p-8 lg:p-12 flex flex-col justify-center
+              ${index % 2 === 1 ? "lg:col-start-1" : ""}
+            `}
+          >
+            <div className="space-y-6">
+              <div className="flex items-center space-x-3">
+                <Quote className="w-8 h-8 text-primary-green" />
+                <div className="flex">
+                  {[...Array(story.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-accent-gold fill-current"
+                    />
+                  ))}
                 </div>
-                <CardContent
-                  className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? "lg:col-start-1" : ""}`}
-                >
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-3">
-                      <Quote className="w-8 h-8 text-primary-green" />
-                      <div className="flex">
-                        {[...Array(story.rating)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 text-accent-gold fill-current" />
-                        ))}
-                      </div>
-                    </div>
-
-                    <h3 className="text-2xl lg:text-3xl font-serif font-bold text-text-primary">{story.title}</h3>
-
-                    <div className="text-sm text-text-secondary">
-                      <strong>{story.childName}</strong> ({story.age}) - Parent: {story.parentName}
-                    </div>
-
-                    <blockquote className="text-lg text-text-secondary leading-relaxed italic">"{story.story}"</blockquote>
-
-                    <div className="bg-gradient-to-r from-light-green to-child-blue/10 p-4 rounded-lg">
-                      <h4 className="font-semibold text-text-primary mb-2">Outcome:</h4>
-                      <p className="text-text-secondary">{story.outcome}</p>
-                    </div>
-                  </div>
-                </CardContent>
               </div>
-            </Card>
-          ))}
+
+              <h3 className="text-2xl lg:text-3xl font-serif font-bold text-text-primary">
+                {story.title}
+              </h3>
+
+              <div className="text-sm text-text-secondary">
+                <strong>{story.childName}</strong> ({story.age}) - Parent:{" "}
+                {story.parentName}
+              </div>
+
+              <blockquote className="text-lg text-text-secondary leading-relaxed italic">
+                "{story.story}"
+              </blockquote>
+
+              <div className="bg-gradient-to-r from-light-green to-child-blue/10 p-4 rounded-lg">
+                <h4 className="font-semibold text-text-primary mb-2">
+                  Outcome:
+                </h4>
+                <p className="text-text-secondary">{story.outcome}</p>
+              </div>
+            </div>
+          </CardContent>
         </div>
-      </section>
+      </Card>
+    ))}
+  </div>
+</section>
+
 
             {/* Video Section */}
             <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text-primary mb-8">
-            Watch Our Success Stories
-          </h2>
-          <div className="grid md:grid-cols-3  gap-8">
-            <div className="rounded-2xl overflow-hidden ">
-              <video controls className="w-50% h-50% rounded-2xl">
-                <source src="/videos/story1.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div className="rounded-2xl overflow-hidden ">
-              <video controls className="w-50% h-50% rounded-2xl">
-                <source src="/videos/story2.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            {/* <div className="rounded-2xl overflow-hidden ">
-              <video controls className="w-50% h-50% rounded-2xl">
-                <source src="/videos/story3.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div> */}
-            
-          </div>
-        </div>
-      </section>
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text-primary mb-8">
+      Watch Our Success Stories
+    </h2>
+
+    {/* Grid layout */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {/* Video 1 */}
+      <div className="rounded-2xl overflow-hidden">
+        <video 
+          controls 
+          className="w-full aspect-video rounded-2xl object-cover"
+        >
+          <source src="/videos/story1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Video 2 */}
+      <div className="rounded-2xl overflow-hidden">
+        <video 
+          controls 
+          className="w-full aspect-video rounded-2xl object-cover"
+        >
+          <source src="/videos/story2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+
+      {/* Video 3 */}
+      <div className="rounded-2xl overflow-hidden">
+        <video 
+          controls 
+          className="w-full aspect-video rounded-2xl object-cover"
+        >
+          <source src="/videos/story3.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+
+          {/* Video 4*/}
+          <div className="rounded-2xl overflow-hidden">
+        <video 
+          controls 
+          className="w-full aspect-video rounded-2xl object-cover"
+        >
+          <source src="/videos/video4.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
       <Footer />
