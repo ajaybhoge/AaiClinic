@@ -14,7 +14,7 @@ export default function SuccessStories() {
       parentName: "Mrs.Palak Darda \n Mr.Hitesh Darda",
       image: "/images/palak.jpeg",
       story:
-        "I'm so grateful to Dr. Maitreyee Limaye for my son's treatment. My child overcame recurrent infections. Her expertise in Ayurveda and gentle approach made a huge difference. My child was prone to frequent colds, coughs, and ear infections, but after Dr. Maitreyee's treatment, we've seen a significant reduction in illnesses. Her advice on diet, lifestyle, and natural remedies has been invaluable. We're so thankful for her care and compassion. Highly recommend!",
+        "I'm so grateful to Dr. Maitreyee Limaye for my daughter's treatment. My child overcame recurrent infections. Her expertise in Ayurveda and gentle approach made a huge difference. My child was prone to frequent colds, coughs, and ear infections, but after Dr. Maitreyee's treatment, we've seen a significant reduction in illnesses. Her advice on diet, lifestyle, and natural remedies has been invaluable. We're so thankful for her care and compassion. Highly recommend!",
       outcome: "Sanvi is healthier, stronger, and free from frequent infections.",
       rating: 5,
     },
