@@ -53,8 +53,8 @@ export default function Footer() {
               <span className="sr-only">Aai Clinic by Dr. Limaye</span>
             </Link>
             <p className="text-white max-w-xs leading-relaxed">
-              Premium pediatric healthcare dedicated to nurturing every child's growth, health, and happiness through
-              holistic Ayurvedic care.
+              Premium pediatric healthcare dedicated to nurturing every child's
+              growth, health, and happiness through holistic Ayurvedic care.
             </p>
           </div>
 
@@ -86,17 +86,24 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0 text-primary-green" />
                 <span className="leading-relaxed">
-                  Dr.Limaye's Ayurvedic clinic, Beside Shami ganpati temple, Delhi gate, Ahilyanagar, Maharashtra,
-                  414001
+                  Dr.Limaye's Ayurvedic clinic, Beside Shami ganpati temple,
+                  Delhi gate, Ahilyanagar, Maharashtra, 414001
                 </span>
               </li>
               <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 mt-1 flex-shrink-0 text-primary-green" />
-                <span>(+91) 94050 03087</span>
+                <img
+                  src="/images/number.png"
+                  alt="Phone number"
+                  className="h-6 w-auto"
+                />
               </li>
+
               <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 mt-1 flex-shrink-0 text-primary-green" />
-                <span>info@aaiclinic.com</span>
+                <img
+                  src="/images/email.png"
+                  alt="Email address"
+                  className="h-6 w-auto"
+                />
               </li>
             </ul>
           </div>
@@ -126,7 +133,9 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between py-8">
-          <p className="text-sm text-white">&copy; {year} Aai Clinic. All rights reserved.</p>
+          <p className="text-sm text-white">
+            &copy; {year} Aai Clinic. All rights reserved.
+          </p>
 
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             {socials.map(({ icon: Icon, href }) => (
@@ -144,5 +153,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

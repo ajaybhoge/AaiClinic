@@ -27,7 +27,7 @@ export default function Contact() {
 
     emailjs
       .send(
-        "service_9v8rx1r", // replace with EmailJS Service ID
+        "service_9v8rx1r", 
         "template_sdlpdkz", // replace with EmailJS Template ID
         formData,
         "FUk4mQcbSCOYPioPE" // replace with EmailJS Public Key
@@ -62,12 +62,12 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Call Us",
-      details: "(+91) 94050 03087",
+      image: "/images/mobileno.png",
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@aaiclinic.com",
+      image: "/images/gmail.png",
     },
     {
       icon: Clock,
@@ -99,6 +99,13 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-text-primary mb-1">{info.title}</h3>
                     <p className="text-text-secondary whitespace-pre-line">{info.details}</p>
+                    {info.image && (
+                   <img
+                       src={info.image}
+                       alt={info.title}
+                       className="w-25 h-10 mt-2 rounded-lg object-cover"
+                      />
+        )}
                   </div>
                 </div>
               ))}
@@ -150,7 +157,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full"
-                      placeholder="your.email@example.com"
+                      placeholder=""
                     />
                   </div>
                 </div>
@@ -168,12 +175,12 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full"
-                      placeholder="+91 91912 29292"
+                      placeholder=""
                     />
                   </div>
                   <div>
                     <label htmlFor="childAge" className="block text-sm font-medium text-text-primary mb-2">
-                      Child's Age
+                      Child's Age *
                     </label>
                     <Input
                       id="childAge"

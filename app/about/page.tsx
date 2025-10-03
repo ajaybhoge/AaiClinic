@@ -247,7 +247,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/download%20%284%29-bGcXKueIUdwsoaOIoWjb7P8HfIyMD1.jpeg"
+                src="/images/Ayur.jpg"
                 alt="Nurturing care and feeding"
                 width={400}
                 height={300}
@@ -262,7 +262,7 @@ export default function About() {
 
             <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20%283%29-YPcBjfSYgdY6rfs5xWG8e4ayOXXNrn.jpeg"
+                src="/images/touch.webp"
                 alt="Gentle baby massage therapy"
                 width={400}
                 height={300}
@@ -277,7 +277,7 @@ export default function About() {
 
             <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/download%20%285%29-qwuXo01UnlopMsEooQDxt0cKOlKGzS.jpeg"
+                src="/images/joy.jpg"
                 alt="Happy healthy child playing"
                 width={400}
                 height={300}
@@ -301,7 +301,7 @@ export default function About() {
             <div className="space-y-16">
               <div className="relative">
                 <Image
-                  src="/images/doctor-examining-child.png"
+                  src="/images/philo.jpg"
                   alt="Doctor examining a child, symbolizing professional and caring medical examination"
                   width={600}
                   height={400}
@@ -353,9 +353,9 @@ export default function About() {
                 ))}
               </div>
               {/* New image added below Our Philosophy content */}
-              <div className="relative mt-8">
+              <div className="relative mt-8 pt-20 pl-20">
                 <Image
-                  src="/images/adult-cradling-baby-hand.png"
+                  src="/images/childs.jpg"
                   alt="Adult hands gently cradling a baby's hand, symbolizing care and protection"
                   width={600}
                   height={700}
