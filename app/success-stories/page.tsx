@@ -94,7 +94,8 @@ export default function SuccessStories() {
             Celebrating Our Families' Journeys
           </h1>
           <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
-            Every child's health journey is unique. Here are inspiring stories from families who found success with our pediatric care.
+            Every child's health journey is unique. Here are inspiring stories
+            from families who found success with our pediatric care.
           </p>
         </div>
       </section>
@@ -111,146 +112,141 @@ export default function SuccessStories() {
         </div>
       </section> */}
 
-  {/* Success Stories */}
-<section className="py-20 bg-gradient-to-br from-cream-bg to-white">
-  <div className="container mx-auto px-4 space-y-16">
-    {stories.map((story, index) => (
-      <Card
-        key={index}
-        className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white rounded-2xl overflow-hidden"
-      >
-        {/* Responsive wrapper: flex on mobile, grid on desktop */}
-        <div
-          className={`
+      {/* Success Stories */}
+      <section className="py-20 bg-gradient-to-br from-cream-bg to-white">
+        <div className="container mx-auto px-4 space-y-16">
+          {stories.map((story, index) => (
+            <Card
+              key={index}
+              className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white rounded-2xl overflow-hidden"
+            >
+              {/* Responsive wrapper: flex on mobile, grid on desktop */}
+              <div
+                className={`
             flex flex-col lg:grid lg:grid-cols-2
             ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}
           `}
-        >
-          {/* Image */}
-          <div
-            className={`
-              relative h-80 sm:h-96 lg:h-[850px]
-              ${index % 2 === 1 ? "lg:col-start-2" : ""}
-            `}
-          >
-            <Image
-              src={story.image}
-              alt={`${story.childName}'s success story`}
-              fill
-              className="object-cover object-top rounded-xl"
-            />
-          </div>
+              >
+                {/* Image */}
+                <div
+                  className={`relative w-full h-auto lg:h-[850px] ${
+                    index % 2 === 1 ? "lg:col-start-2" : ""
+                  }`}
+                >
+                  <Image
+                    src={story.image}
+                    alt={`${story.childName}'s success story`}
+                    width={700} // approximate width
+                    height={500} // approximate height
+                    className="object-cover object-top rounded-xl"
+                  />
+                </div>
 
-          {/* Content */}
-          <CardContent
-            className={`
+                {/* Content */}
+                <CardContent
+                  className={`
               p-6 sm:p-8 lg:p-12 flex flex-col justify-center
               ${index % 2 === 1 ? "lg:col-start-1" : ""}
             `}
-          >
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <Quote className="w-8 h-8 text-primary-green" />
-                <div className="flex">
-                  {[...Array(story.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-accent-gold fill-current"
-                    />
-                  ))}
-                </div>
+                >
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-3">
+                      <Quote className="w-8 h-8 text-primary-green" />
+                      <div className="flex">
+                        {[...Array(story.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-5 h-5 text-accent-gold fill-current"
+                          />
+                        ))}
+                      </div>
+                    </div>
+
+                    <h3 className="text-2xl lg:text-3xl font-serif font-bold text-text-primary">
+                      {story.title}
+                    </h3>
+
+                    <div className="text-sm text-text-secondary">
+                      <strong>{story.childName}</strong> ({story.age}) - Parent:{" "}
+                      {story.parentName}
+                    </div>
+
+                    <blockquote className="text-lg text-text-secondary leading-relaxed italic">
+                      "{story.story}"
+                    </blockquote>
+
+                    <div className="bg-gradient-to-r from-light-green to-child-blue/10 p-4 rounded-lg">
+                      <h4 className="font-semibold text-text-primary mb-2">
+                        Outcome:
+                      </h4>
+                      <p className="text-text-secondary">{story.outcome}</p>
+                    </div>
+                  </div>
+                </CardContent>
               </div>
-
-              <h3 className="text-2xl lg:text-3xl font-serif font-bold text-text-primary">
-                {story.title}
-              </h3>
-
-              <div className="text-sm text-text-secondary">
-                <strong>{story.childName}</strong> ({story.age}) - Parent:{" "}
-                {story.parentName}
-              </div>
-
-              <blockquote className="text-lg text-text-secondary leading-relaxed italic">
-                "{story.story}"
-              </blockquote>
-
-              <div className="bg-gradient-to-r from-light-green to-child-blue/10 p-4 rounded-lg">
-                <h4 className="font-semibold text-text-primary mb-2">
-                  Outcome:
-                </h4>
-                <p className="text-text-secondary">{story.outcome}</p>
-              </div>
-            </div>
-          </CardContent>
+            </Card>
+          ))}
         </div>
-      </Card>
-    ))}
-  </div>
-</section>
+      </section>
 
+      {/* Video Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text-primary mb-8">
+            Watch Our Success Stories
+          </h2>
 
-            {/* Video Section */}
-            <section className="py-20 bg-white">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text-primary mb-8">
-      Watch Our Success Stories
-    </h2>
+          {/* Grid layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {/* Video 1 */}
+            <div className="rounded-2xl overflow-hidden">
+              <video
+                controls
+                className="w-full aspect-video rounded-2xl object-cover"
+              >
+                <source src="/videos/story1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
-    {/* Grid layout */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      {/* Video 1 */}
-      <div className="rounded-2xl overflow-hidden">
-        <video 
-          controls 
-          className="w-full aspect-video rounded-2xl object-cover"
-        >
-          <source src="/videos/story1.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+            {/* Video 2 */}
+            <div className="rounded-2xl overflow-hidden">
+              <video
+                controls
+                className="w-full aspect-video rounded-2xl object-cover"
+              >
+                <source src="/videos/story2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
-      {/* Video 2 */}
-      <div className="rounded-2xl overflow-hidden">
-        <video 
-          controls 
-          className="w-full aspect-video rounded-2xl object-cover"
-        >
-          <source src="/videos/story2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+            {/* Video 3 */}
+            <div className="rounded-2xl overflow-hidden">
+              <video
+                controls
+                className="w-full aspect-video rounded-2xl object-cover"
+              >
+                <source src="/videos/story3.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
-
-      {/* Video 3 */}
-      <div className="rounded-2xl overflow-hidden">
-        <video 
-          controls 
-          className="w-full aspect-video rounded-2xl object-cover"
-        >
-          <source src="/videos/story3.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-
-          {/* Video 4*/}
-          <div className="rounded-2xl overflow-hidden">
-        <video 
-          controls 
-          className="w-full aspect-video rounded-2xl object-cover"
-        >
-          <source src="/videos/video4.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+            {/* Video 4*/}
+            <div className="rounded-2xl overflow-hidden">
+              <video
+                controls
+                className="w-full aspect-video rounded-2xl object-cover"
+              >
+                <source src="/videos/video4.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
       <WhatsAppButton />
     </main>
-  )
+  );
 }
