@@ -2,6 +2,7 @@ import Header from "./components/header"
 import Hero from "./components/hero"
 import AboutPreview from "./components/about-preview"
 import TestimonialsPreview from "./components/testimonials-preview"
+import AkashwaniInterview from "./components/akashwani-interview"
 import Footer from "./components/footer"
 import WhatsAppButton from "./components/whatsapp-button"
 import Image from "next/image"
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <Hero />
       <AboutPreview />
+      <AkashwaniInterview />
       <TestimonialsPreview />
       {/* Common Child Health Issues & Ayurvedic Solutions */}
       <section className="py-20 bg-white">
